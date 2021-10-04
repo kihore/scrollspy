@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ScrollSpy</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#crickbuzz">crickbuzz</a>
+                <a href="#about">about</a>
+                <a href="#services">Services</a>
+                <a href="#End">End</a>
+            </nav>
+        </header>
+        <section id="home" style="background-color: rgb(211, 247, 9);">Home</section>
+        <section id="crickbuzz" style="background-color: rgb(0, 250, 154);">crickbuzz</section>
+        <table style="background-image: url(./image/dhoni.jpg);">
+            <tr>
+                <td>
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>Name</label>
+                            <input type="text" name="playername" id="playername" onkeypress="return (event.charCode > 64 && 
+                            event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" 
+                            placeholder="Full Name" required>
+                        </div>
+                        <div>
+                            <label>country</label>
+                            <input type="text" name="country" id="country" onkeypress="return (event.charCode > 64 && 
+                            event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" 
+                            placeholder="surname">
+                        </div>
+                        <div  class="form-action-button">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <div class="table-scroll">
+                    <table class="list" id="employeeList" >
+                        <thead> 
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    
+                            <tr>
+                                <th>playername</th>
+                                <th>country</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <section id="about" style="background-color: rgb(255, 91, 36);">about</section>
+        <section id="Services" style="background-color: rgb(205, 92, 92);">Services</section>
+        <section id="End">End</section>
+        <script src="app.js">
+    </script>
+    </body>
+</html>
