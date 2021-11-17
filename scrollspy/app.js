@@ -11,7 +11,7 @@ window.onscroll = () =>{
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*='+ id +']').classList.add('active');
             });
-        };
+        }
     });
 };
 window.onload = () => {
@@ -50,10 +50,10 @@ function readFormData() {
 function insertNewRecord(data) {
     var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    let cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.playername;
     cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.country;
+    let cell2.innerHTML = data.country;
 }
 
 function resetForm() {
@@ -75,7 +75,7 @@ function updateRecord(formData) {
 }
 function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        let row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
       resetForm();
     }
